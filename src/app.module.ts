@@ -11,10 +11,7 @@ import { SalonAvailabilityController } from './salon-availability/salon-availabi
 import { BookingModule } from './booking/booking.module'; // Import BookingModule
 
 @Module({
-  imports: [
-    MongooseModule.forRoot(databaseConfig.uri),
-    BookingModule
-  ],
+  imports: [MongooseModule.forRoot(databaseConfig.uri), BookingModule],
   controllers: [AppController, AuthController, SalonAvailabilityController],
   providers: [AppService, AuthService, UserService, SalonAvailabilityService],
 })
